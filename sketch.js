@@ -1,31 +1,40 @@
-function preload(){
+  let image;
   let wind;
   let rain;
   let hail;
   let thunder;
+
+function preload(){
+  image = loadImage('storm.jpg');
+  wind = loadSound('wind.mp3');
+  rain = loadSound('rain.mp3');
+  hail = loadSound('hail.mp3');
+  thunder = loadSound('thunder.mp4');
 }
 
-
 function setup(){
-  loadImage('storm.jpg');
-  createCanvas(700, 850);
-  loadSound(0.5);
+  createCanvas(mouseX, mouseY, 700, 850);
+  soundVolume = 0.5;
+  wind(setVolume);
+  rain(setVolume);
+  hail(setVolume);
+  thunder(setVolume);
 }
 
 function mouseMoved(){
   if (mouseY > 200){
-    play.wind('wind.mp3');
+    wind.play();
   }
   if (mouseY > 300){
-    play.rain('rain.mp3');
+    rain.play();
   }
   else {
   if (mouseY > 400){
-    play.hail('hail.mp3');
+    hail.play();
   }
   else {
     if (mouseY > 500){
-      sound('thunder.mp3');
+      hail.play();
     }
   }
   }
