@@ -6,6 +6,7 @@
 
 function preload(){
   image = loadImage('storm.jpg');
+  soundFormats('mp3');
   wind = loadSound('wind.mp3');
   rain = loadSound('rain.mp3');
   hail = loadSound('hail.mp3');
