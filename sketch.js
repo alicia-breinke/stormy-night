@@ -1,6 +1,6 @@
-function preload() {
-  let imgOne();
-  let soundVolume();
+function preload(){
+  let imgOne;
+  let soundVolume;
 }
 
 
