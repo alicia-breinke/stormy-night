@@ -12,23 +12,23 @@ function setup(){
 
 function mouseMoved(){
   if (mouseY > 700){
-    sound.play('thunder.mp3');
+    sound('thunder.mp3');
   }
   else {
   if (mouseY > 600){
-    sound.play('hail.mp3');
+    sound('hail.mp3');
   }
   else {
     if (mouseY > 500){
-      sound.play('rain.mp3');
+      sound('rain.mp3');
     }
     else {
       if (mouseY > 400){
-        sound.play('rain.mp3');
+        sound('rain.mp3');
       }
       else {
         if (mouseY > 300){
-          sound.play('wind.mp3');
+          sound('wind.mp3');
         }
       }
     }
