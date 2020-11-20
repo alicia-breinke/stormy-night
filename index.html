@@ -7,50 +7,7 @@
   </head>
   <body>
 
-    <script src="sketch.js">
-
-        let imgOne();
-        let soundVolume();
-        let thunderSound();
-        let windSound();
-        let hailSound();
-        let rainSound();
-
-        function setup(){
-          imgOne = loadImage('storm.jpg');
-          createCanvas(700, 850);
-          soundVolume = 0.5;
-          thunderSound = loadSound('thunder.mp3');
-          windSound = loadSound('wind.mp3');
-          hailSound = loadSound('hail.mp3');
-          rainSound = loadSound('rain.mp3');
-        }
-
-        function draw(){
-          image(img, 75, 75);
-        }
-
-        function mouseMoved(){
-          if (mouseY > 700){
-            thunderSound.play();
-          }
-          else {
-          if (mouseY > 600){
-            windSound.play();
-          }
-          else {
-            if (mouseY > 500){
-              hailSound.play();
-            }
-            else {
-              if (mouseY < 400){
-                rainSound.play();
-              }
-            }
-          }
-        }
-        }
-    </script>
+    <script src="sketch.js"></script>
 
 </body>
 </html>
