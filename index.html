@@ -8,32 +8,23 @@
   <body>
 
     <script src="sketch.js">
-        let thunderSound;
-        let windSound;
-        let hailSound;
-        let rainSound;
-        let imgOne;
-        let soundVolume;
-        function preload(){
-          soundFormats('mp3');
+
+        let imgOne();
+        let thunderSound();
+        let windSound();
+        let hailSound();
+        let rainSound();
+
+        function setup(){
+          imgOne = loadImage('storm.jpg');
+          createCanvas(700, 850);
+          noFill();
+          soundVolume = 0.5;
           thunderSound = loadSound('thunder.mp3');
           windSound = loadSound('wind.mp3');
           hailSound = loadSound('hail.mp3');
           rainSound = loadSound('rain.mp3');
-          imageFormats('jpg');
-          imgOne = loadImage('storm.jpg');
-         }
-
-        function setup(){
-          imgOne();
-          createCanvas(700, 850);
-          noFill();
-          soundVolume = 0.5;
-          thunderSound.setVolume(soundVolume);
-          windSound.setVolume(soundVolume);
-          hailSound.setVolume(soundVolume);
-          rainSound.setVolume(soundVolume);
-          }
+        }
 
         function draw(){
           image(img, 75, 75);
